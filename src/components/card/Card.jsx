@@ -4,6 +4,8 @@ import { Link } from 'react-router';
 
 const Card = ({ friend }) => {
   const { name, picture, days_since_contact, status, tags } = friend;
+  
+  
 
   return (
     <Link to={`/friendsdetails/${friend.id}` } className="card w-full bg-white shadow-sm border border-gray-100 rounded-2xl">

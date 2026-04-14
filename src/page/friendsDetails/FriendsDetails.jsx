@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router";
 
 import useFriendsdata from "../../hooks/useFriendsdata";
@@ -13,14 +13,39 @@ const FriendsDetails = () => {
   const { friends} = useFriendsdata();
 
   const expectedfriend = friends.find((friend) => friend.id === parseInt(id));
-  console.log("expectedfriend", expectedfriend);
+  
 
+  const [callFriend, setCallFriend] = useState([])
+  const [textFriend, setTextFriend] = useState([])
+  const [videocallFriend, setVideoCallFriend] = useState([])
+
+  const handleCallFriend = () =>{
+    setCallFriend([...callFriend,expectedfriend])
+    alert("Friend calling...")
+    
+  }
+
+  const handleTextFriend = () =>{
+    setTextFriend([...textFriend,expectedfriend])
+    alert("Friend texting...")
+  }
+
+  const handleVideoCallFriend = () =>{
+    setVideoCallFriend([...videocallFriend,expectedfriend])
+    alert("Friend Video Calling...")
+  }
+
+
+console.log('friend call',callFriend);
+
+
+    
   return (
     <div>
       <div className="bg-[#f8fafb] min-h-screen">
         <div className="max-w-7xl mx-auto p-6">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-            {/* Left Profile Card */}
+            
             <div className="space-y-4">
               <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 text-center">
                 <img
@@ -134,18 +159,18 @@ const FriendsDetails = () => {
                   Quick Check-In
                 </h2>
 
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                  <button className="btn btn-ghost h-auto flex flex-col items-center justify-center border border-gray-50 bg-[#f9fafb] rounded-xl p-8 normal-case">
+                <div  className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <button onClick={handleCallFriend} className="btn btn-ghost h-auto flex flex-col items-center justify-center border border-gray-50 bg-[#f9fafb] rounded-xl p-8 normal-case">
                     <span className="text-2xl mb-2"><FiPhoneCall /></span>
                     <span className="font-bold text-gray-700">Call</span>
                   </button>
 
-                  <button className="btn btn-ghost h-auto flex flex-col items-center justify-center border border-gray-50 bg-[#f9fafb] rounded-xl p-8 normal-case">
+                  <button onClick={handleTextFriend} className="btn btn-ghost h-auto flex flex-col items-center justify-center border border-gray-50 bg-[#f9fafb] rounded-xl p-8 normal-case">
                     <span className="text-2xl mb-2"><MdOutlineTextsms /></span>
                     <span className="font-bold text-gray-700">Text</span>
                   </button>
 
-                  <button className="btn btn-ghost h-auto flex flex-col items-center justify-center border border-gray-50 bg-[#f9fafb] rounded-xl p-8 normal-case">
+                  <button onClick={handleVideoCallFriend} className="btn btn-ghost h-auto flex flex-col items-center justify-center border border-gray-50 bg-[#f9fafb] rounded-xl p-8 normal-case">
                     <span className="text-2xl mb-2"><IoVideocamOutline /></span>
                     <span className="font-bold text-gray-700">Video</span>
                   </button>
