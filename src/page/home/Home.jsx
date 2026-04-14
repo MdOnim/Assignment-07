@@ -1,9 +1,11 @@
 import React from 'react';
 import useFriendsdata from '../../hooks/useFriendsdata';
 import Card from '../../components/card/Card';
+import { BeatLoader } from 'react-spinners';
+
 
 const Home = () => {
-const { friends,} = useFriendsdata();
+const { friends,loading} = useFriendsdata();
 console.log(friends);
 
 
@@ -49,15 +51,17 @@ return (
     </div>
 
     <hr className ="border-gray-100 mt-10" />
-  </div>
-    
+  </div> 
     {/* AKHANE CARD */}
 
-    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-10'>
+    {loading ? <div className='flex justify-center items-center'>
+      <BeatLoader size={15} />
+    </div> 
+    : <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-10'>
     {
       friends.map(friend => <Card key={friend.id} friend={friend}></Card>  )
     }
-    </div>
+    </div>}
 
 
 
