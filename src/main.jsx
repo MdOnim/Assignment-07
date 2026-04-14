@@ -7,6 +7,7 @@ import Root from './layout/Root';
 import Home from './page/home/Home';
 import Timeline from './page/timeline/Timeline';
 import Stats from './page/stats/Stats';
+import FriendsDetails from './page/friendsDetails/FriendsDetails';
 
 
 
@@ -27,11 +28,12 @@ const router = createBrowserRouter([
       path:"/stats",
       Component:Stats,
     },
+    {
+      path:"/friendsdetails/:id",
+      Component:FriendsDetails,
+    },
    
-  //  {
-  //   path:"/apps/:id",
-  //   Component:AppDetailes
-  //  }
+  
 
 
   ],

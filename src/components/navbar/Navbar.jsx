@@ -57,9 +57,9 @@ const Navbar = () => {
     );
 
     return (
-        <div className='bg-white border-b border-slate-100 sticky top-0 z-50'>
+        <div className='bg-white border-b border-slate-100 '>
             <div className="navbar container mx-auto py-3">
-                {/* Logo Section */}
+              
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -67,7 +67,7 @@ const Navbar = () => {
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
                             </svg>
                         </div>
-                        <ul tabIndex={0} className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow gap-2 list-none">
+                        <ul tabIndex={0} className="menu menu-sm dropdown-content bg-base-100 rounded-box  mt-3 w-52 p-2 shadow gap-2 list-none">
                             {links}
                         </ul>
                     </div>

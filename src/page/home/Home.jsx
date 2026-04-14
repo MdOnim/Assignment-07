@@ -11,16 +11,17 @@ console.log(friends);
 
 
 return (
-<div className="container mx-auto  p-10 ">
-  <div >
-    <div className=" text-center mb-10">
+<div className=" ">
+  <div  >
+    <div className=" text-center mb-10 container mx-auto p-10 ">
       <h1 className="text-4xl font-bold text-slate-800">Friends to keep close in your life</h1>
       <p className="text-slate-500 my-4">Your personal shelf of meaningful connections...</p>
       <button className="btn bg-[#1a3a32] text-white rounded-lg">+ Add a Friend</button>
     </div>
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
     
-      <div className="card card-dash bg-base-100 border border-base-200 shadow-md">
+    <div className="container w-[77%] mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
+    
+      <div className=" card card-dash bg-base-100 border border-base-200 shadow-md">
         <div className="card-body items-center py-10">
           <h2 className="text-5xl font-bold">10</h2>
           <p className="text-xs uppercase text-slate-400">Total Friends</p>
@@ -57,7 +58,7 @@ return (
     {loading ? <div className='flex justify-center items-center'>
       <BeatLoader size={15} />
     </div> 
-    : <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-10'>
+    : <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-10  container mx-auto'>
     {
       friends.map(friend => <Card key={friend.id} friend={friend}></Card>  )
     }
