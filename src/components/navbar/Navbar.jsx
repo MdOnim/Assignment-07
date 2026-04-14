@@ -1,4 +1,7 @@
 import React from 'react';
+import { ImStatsDots } from 'react-icons/im';
+import { IoHomeOutline } from 'react-icons/io5';
+import { RiTimeLine } from 'react-icons/ri';
 import { NavLink } from 'react-router';
 
 
@@ -17,7 +20,7 @@ const Navbar = () => {
                     }
                 >
                  
-                    <span>Home</span>
+                    <span className='flex items-center gap-2' ><IoHomeOutline /> Home</span>
                 </NavLink>
             </li>
             <li>
@@ -32,7 +35,7 @@ const Navbar = () => {
                     }
                 >
                   
-                    <span>Timeline</span>
+                    <span className='flex items-center gap-2'><RiTimeLine />Timeline</span>
                 </NavLink>
             </li>
             <li>
@@ -47,7 +50,7 @@ const Navbar = () => {
                     }
                 >
              
-                    <span>Stats</span>
+                    <span className='flex items-center gap-2'> <ImStatsDots /> Stats</span>
                 </NavLink>
             </li>
         </>
