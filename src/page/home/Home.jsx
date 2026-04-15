@@ -55,7 +55,7 @@ return (
   </div> 
    
 
-    {loading ? <div className='flex justify-center items-center'>
+    {loading ? <div className='flex justify-center items-center min-h-[300px] sm:min-h-[400px] w-full'>
       <BeatLoader size={15} />
     </div> 
     : <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-10  container mx-auto'>

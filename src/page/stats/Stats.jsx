@@ -6,6 +6,7 @@ import { FriendsContext } from '../../context/friendsContext';
 
 const Stats = () => {
  const { callFriend, textFriend, videocallFriend } = useContext(FriendsContext);
+ const noData = callFriend.length === 0 && textFriend.length === 0 && videocallFriend.length === 0
 
     const data = [
   { name: 'Text', value: textFriend.length, fill: '#7f37f5' },
@@ -14,15 +15,25 @@ const Stats = () => {
   
 ];
     return (
-        <div className=' container mx-auto '>
+<div className=' container mx-auto'>
 
-            <h1 className='m-2 font-bold text-center md:text-3xl text-left' >Friendship Analytics</h1>
-
+{
+  noData ? <div>
+    <div className="container mx-auto px-4 m-10">
+          <div className="w-full border border-gray-200 rounded-xl bg-white min-h-[250px] flex items-center justify-center p-8">
+            <div className="text-center">
+              <h2 className="text-xl md:text-2xl font-semibold">
+                No analytics available
+              </h2>
+            </div>
+          </div>
+        </div>
+  </div> : <div>
+    <h1 className='m-2 font-bold text-center md:text-3xl text-left' >Friendship Analytics</h1>
 <div className="my-10 shadow-lg p-5 md:p-10 rounded-md border border-slate-100 bg-white ">
-
 <p className='font-semibold mb-5'>By Interaction Type</p>
 
-    <PieChart style={{ width: '100%', maxWidth: '500px', maxHeight: '80vh', aspectRatio: 1 , margin: 'auto' }} responsive>
+    <PieChart style={{ width: '300px', height: '300px', maxWidth: '500px', maxHeight: '80vh', aspectRatio: 1 , margin: 'auto' }} responsive>
       <Pie
         data={data}
         innerRadius="80%"
@@ -37,6 +48,16 @@ const Stats = () => {
      <Tooltip />
     </PieChart>
         </div>
+        
+  </div>
+}
+
+
+        
+        
+        
+        
+        
         </div>
     );
 };

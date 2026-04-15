@@ -10,6 +10,7 @@ import Stats from './page/stats/Stats';
 import FriendsDetails from './page/friendsDetails/FriendsDetails';
 import FriendsContexprovider from './context/friendsContexprovider';
 import { Bounce, ToastContainer } from 'react-toastify';
+import Error from './page/error/Error';
 
 
 
@@ -40,7 +41,7 @@ const router = createBrowserRouter([
 
 
   ],
-  // errorElement:<h1> This page not found 404</h1>
+  errorElement:<Error></Error>
   }
 ]);
 

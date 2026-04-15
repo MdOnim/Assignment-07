@@ -13,29 +13,29 @@ const Timeline = () => {
 
 
   return (
-    <div className="container mx-auto " >
+    <div className="container mx-auto  " >
       
       
       {
         callFriend.length=== 0 && textFriend.length === 0 && videocallFriend.length === 0 ? 
         
-<div class="container mx-auto px-4 m-10">
-  <div class="w-full  border border-gray-200 rounded-xl bg-white min-h-[250px]  flex items-center justify-center p-8">
+<div className="container mx-auto px-4 m-10">
+  <div className  ="w-full  border border-gray-200 rounded-xl bg-white min-h-[250px]  flex items-center justify-center p-8">
     
-    <div class="text-center">
-      <h2 class="text-xl md:text-2xl font-semibold  ">
+    <div className="text-center">
+      <h2 className="text-xl md:text-2xl font-semibold  ">
          No timeline available
       </h2>
     </div>
     
   </div>
 </div> : <div className="p-4 min-h-screen">
-    <div className="max-w-4xl mx-auto">
-    <h2>Timeline </h2>
+    <div className="max-w-4xl  mx-auto">
+    <h2 className="text-2xl font-bold mb-4">Timeline </h2>
         
 
-  <div className="dropdown flex items-start justify-between gap-2 ">
-        
+  <div className=" flex items-start justify-between gap-2 whitespace-nowrap ">
+  <div className="dropdown"> 
   <div tabIndex={0} role="button" className="btn ">Filter timeline</div>
   <ul tabIndex="-1" className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-3 shadow-sm">
     <li onClick={()=> setFilter("all")}><a>All</a></li>
@@ -43,7 +43,7 @@ const Timeline = () => {
     <li onClick={()=> setFilter("text")}><a>Text</a></li>
     <li onClick={()=> setFilter("video")}><a>Video</a></li>
   </ul>
-
+</div>
 
   <label className="input">
   <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
