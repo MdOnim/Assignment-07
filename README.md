@@ -1,16 +1,62 @@
-# React + Vite
+# 🌟 KeenKeeper — Keep Your Friendships Alive
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A modern friendship management web application that helps users stay connected with friends by tracking interactions, organizing communication history, and visualizing friendship activity.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📌 Overview
 
-## React Compiler
+KeenKeeper is a responsive React-based web application designed to help users maintain meaningful friendships. It allows users to track interactions like calls, texts, and video chats, and view them in a structured timeline with analytics insights.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The application is fully responsive and works smoothly across mobile, tablet, and desktop devices.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Live Demo
+
+- 🔗 Live Site:  
+- 📂 GitHub Repo:  
+
+---
+
+## 🛠️ Tech Stack
+
+- React.js  
+- React Router DOM  
+- Tailwind CSS  
+- Recharts  
+- React Icons  
+- Context API  
+
+---
+
+## ✨ Key Features
+
+### 👥 Friend Management
+Displays friends from a JSON dataset with profile images, tags, status indicators, and contact details in a responsive card layout.
+
+### ⚡ Interaction Timeline
+Automatically logs Call, Text, and Video interactions with timestamps and displays them in an organized timeline view.
+
+### 📊 Friendship Analytics
+Visualizes interaction data using a Pie Chart (Recharts) to show the distribution of Calls, Texts, and Video interactions.
+
+---
+
+## 📱 Responsive Design
+
+Fully responsive layout optimized for:
+- Mobile devices 📱  
+- Tablets 📟  
+- Desktop 💻  
+
+---
+
+## 🧑‍💻 Author
+
+- Developed by: Md Onim 
+---
+
+## 📌 Note
+
+This project was built as part of an assignment to demonstrate React development skills, state management, routing, and data visualization.
