@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+
 import { useParams } from "react-router";
 
 import useFriendsdata from "../../hooks/useFriendsdata";
 import { FiArchive, FiPhoneCall } from "react-icons/fi";
 import { MdOutlineDeleteForever, MdOutlineNotificationsPaused, MdOutlineTextsms } from "react-icons/md";
 import { IoVideocamOutline } from "react-icons/io5";
+import { useContext } from "react";
+import { FriendsContext } from "../../context/friendsContext";
+import { toast } from "react-toastify";
 
 
 
@@ -12,31 +15,31 @@ const FriendsDetails = () => {
   const { id } = useParams();
   const { friends} = useFriendsdata();
 
-  const expectedfriend = friends.find((friend) => friend.id === parseInt(id));
-  
+const expectedfriend = friends.find((friend) => friend.id === parseInt(id));
+    
 
-  const [callFriend, setCallFriend] = useState([])
-  const [textFriend, setTextFriend] = useState([])
-  const [videocallFriend, setVideoCallFriend] = useState([])
+
+const {callFriend,setCallFriend,textFriend,setTextFriend,videocallFriend,setVideoCallFriend} = useContext(FriendsContext);
+
+
 
   const handleCallFriend = () =>{
     setCallFriend([...callFriend,expectedfriend])
-    alert("Friend calling...")
-    
+    toast.success(`Call with ${expectedfriend?.name}`) 
   }
 
   const handleTextFriend = () =>{
     setTextFriend([...textFriend,expectedfriend])
-    alert("Friend texting...")
+    toast.success(`Text with ${expectedfriend?.name}`)
   }
 
   const handleVideoCallFriend = () =>{
     setVideoCallFriend([...videocallFriend,expectedfriend])
-    alert("Friend Video Calling...")
+    toast.success(`Video call with ${expectedfriend?.name}`)
   }
+ 
 
 
-console.log('friend call',callFriend);
 
 
     
@@ -92,7 +95,7 @@ console.log('friend call',callFriend);
                 </p>
               </div>
 
-              {/* DaisyUI Buttons */}
+          
               <div className="space-y-3">
                 <button className="btn btn-outline w-full bg-white border-gray-200 text-gray-700 normal-case font-bold">
                   <MdOutlineNotificationsPaused size={20} /> Snooze 2 Weeks

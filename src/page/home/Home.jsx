@@ -6,7 +6,7 @@ import { BeatLoader } from 'react-spinners';
 
 const Home = () => {
 const { friends,loading} = useFriendsdata();
-console.log(friends);
+
 
 
 
@@ -53,7 +53,7 @@ return (
 
     <hr className ="border-gray-100 mt-10" />
   </div> 
-    {/* AKHANE CARD */}
+   
 
     {loading ? <div className='flex justify-center items-center'>
       <BeatLoader size={15} />

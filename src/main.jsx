@@ -8,6 +8,9 @@ import Home from './page/home/Home';
 import Timeline from './page/timeline/Timeline';
 import Stats from './page/stats/Stats';
 import FriendsDetails from './page/friendsDetails/FriendsDetails';
+import FriendsContexprovider from './context/friendsContexprovider';
+import { Bounce, ToastContainer } from 'react-toastify';
+
 
 
 
@@ -43,6 +46,25 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-     <RouterProvider router={router} />
+      
+  <FriendsContexprovider>
+     <RouterProvider router={router} />,
+    <ToastContainer
+position="top-center"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick={false}
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="light"
+transition={Bounce}
+/>
+
+  </FriendsContexprovider>
+
+
   </StrictMode>,
 )
