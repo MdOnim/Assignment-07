@@ -29,7 +29,7 @@ const Timeline = () => {
     </div>
     
   </div>
-</div> : <div className="p-4 min-h-screen">
+</div> : <div className="p-4 ">
     <div className="max-w-4xl  mx-auto">
     <h2 className="text-2xl font-bold mb-4">Timeline </h2>
         
@@ -71,8 +71,8 @@ const Timeline = () => {
 
       <div className="max-w-4xl mx-auto flex flex-col items-center space-y-3 mt-2">
 
-        {(filter === "all" || filter === "call") && callFriend.filter((call) => call.name.toLowerCase().includes(search)).map((call) => (
-          <div key={call.id} className="w-full">
+        {(filter === "all" || filter === "call") && callFriend.filter((call) => call.name.toLowerCase().includes(search)).map((call, index) => (
+          <div key={index} className="w-full">
             <div className="bg-white p-4 rounded-xl border border-slate-100 shadow-sm flex items-center gap-4">
               <div className="">
                 <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center text-2xl shadow-inner">
@@ -90,8 +90,8 @@ const Timeline = () => {
         ))}
 
        
-        {(filter === "all" || filter === "text")&&textFriend   .filter((text) => text.name.toLowerCase().includes(search)).map((text) => (
-          <div key={text.id} className="w-full">
+        {(filter === "all" || filter === "text")&&textFriend   .filter((text) => text.name.toLowerCase().includes(search)).map((text,index) => (
+          <div key={index} className="w-full">
             <div className="bg-white p-4 rounded-xl border border-slate-100 shadow-sm flex items-center gap-4">
               <div className="">
                 <div className="w-12 h-12 bg-amber-50 rounded-lg flex items-center justify-center text-2xl shadow-inner">
@@ -109,8 +109,8 @@ const Timeline = () => {
         ))}
 
   
-        {(filter === "all" || filter === "video")&& videocallFriend .filter((video) => video.name.toLowerCase().includes(search)). map((video) => (
-          <div key={video.id} className="w-full">
+        {(filter === "all" || filter === "video")&& videocallFriend .filter((video) => video.name.toLowerCase().includes(search)). map((video,index) => (
+          <div key={index} className="w-full">
             <div className="bg-white p-4 rounded-xl border border-slate-100 shadow-sm flex items-center gap-4">
               <div>
                 <div className="w-12 h-12 bg-purple-50 rounded-lg flex items-center justify-center text-2xl shadow-inner">

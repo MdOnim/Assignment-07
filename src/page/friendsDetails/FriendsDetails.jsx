@@ -131,7 +131,8 @@ const {callFriend,setCallFriend,textFriend,setTextFriend,videocallFriend,setVide
 
                 <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 text-center">
                   <h2 className="text-3xl font-bold text-[#1a4d40]">
-                    {expectedfriend?.next_due_date}
+                    {/* {expectedfriend?.next_due_date} */}
+                    {new Date().toISOString().split("T")[0]}
                   </h2>
                   <p className="text-gray-400 text-sm mt-3 font-medium">
                     Next Due

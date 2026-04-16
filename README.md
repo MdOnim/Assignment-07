@@ -14,8 +14,8 @@ The application is fully responsive and works smoothly across mobile, tablet, an
 
 ## 🚀 Live Demo
 
-- 🔗 Live Site:  
-- 📂 GitHub Repo:  
+- 🔗 Live Site: https://keen-keeper-seven-peach.vercel.app/
+- 📂 GitHub Repo: https://github.com/MdOnim/Assignment-07.git
 
 ---
 

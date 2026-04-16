@@ -15,7 +15,7 @@ const Stats = () => {
   
 ];
     return (
-<div className=' container mx-auto'>
+<div className=' container mx-auto '>
 
 {
   noData ? <div>
@@ -28,8 +28,9 @@ const Stats = () => {
             </div>
           </div>
         </div>
-  </div> : <div>
-    <h1 className='m-2 font-bold text-center md:text-3xl text-left' >Friendship Analytics</h1>
+  </div> : <div className='m-2'>
+    <h1 className='font-bold md:text-2xl mt-6' >Friendship Analytics</h1>
+    
 <div className="my-10 shadow-lg p-5 md:p-10 rounded-md border border-slate-100 bg-white ">
 <p className='font-semibold mb-5'>By Interaction Type</p>
 
